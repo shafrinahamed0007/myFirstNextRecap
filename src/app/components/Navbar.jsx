@@ -1,15 +1,37 @@
 import Link from "next/link";
 
 const Navbar = () => {
-    const links = <>
-    <li><Link href="/">Home</Link></li>
-    <li><Link href="/about">About</Link></li>
-    <li><Link href="/about/designers">Designers</Link></li>
-    <li><Link href="/about/developers">Developers</Link></li>
-    <li><Link href="/contact">Contact Us</Link></li>
-    <li><Link href="/contact/support ">Support Team</Link></li>
-    <li><Link href="/blogs ">Blogs</Link></li>
+  const links = (
+    <>
+      <li>
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/about">About</Link>
+      </li>
+      <li>
+        <Link href="/about/designers">Designers</Link>
+      </li>
+      <li>
+        <Link href="/about/developers">Developers</Link>
+      </li>
+      <li>
+        <Link href="/contact">Contact Us</Link>
+      </li>
+      <li>
+        <Link href="/contact/support ">Support Team</Link>
+      </li>
+      <li>
+        <Link href="/blogs ">Blogs</Link>
+      </li>
+      <li>
+        <Link href="/news ">News</Link>
+      </li>
+      <li>
+        <Link href="/dashboard ">Dashboard</Link>
+      </li>
     </>
+  );
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -37,16 +59,14 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
-            
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">daisyUI</Link>
+        <Link href="/" className="btn btn-ghost text-xl">
+          daisyUI
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-            {links}
-         
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
